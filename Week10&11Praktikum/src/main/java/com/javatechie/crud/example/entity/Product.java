@@ -1,4 +1,4 @@
-package com.example.crud.entity;
+package com.javatechie.crud.example.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

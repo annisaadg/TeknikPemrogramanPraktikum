@@ -1,12 +1,8 @@
-package com.example.crud.controller;
+package com.javatechie.crud.example.controller;
 
-import com.example.crud.entity.Product;
-import com.example.crud.service.ProductService;
+import com.javatechie.crud.example.entity.Product;
+import com.javatechie.crud.example.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,27 +14,27 @@ public class ProductController {
     private ProductService service;
 
     @PostMapping("/addProduct")
-    public Product addProduct(@RequestBody Product product){
+    public Product addProduct(@RequestBody Product product) {
         return service.saveProduct(product);
     }
 
-    @PostMapping("/addProduct")
-    public List<Product> addProducts(@RequestBody List<Product> products){
+    @PostMapping("/addProducts")
+    public List<Product> addProducts(@RequestBody List<Product> products) {
         return service.saveProducts(products);
     }
 
     @GetMapping("/products")
     public List<Product> findAllProducts() throws Exception {
-        return service.getProducts();
+        return service.findAll();
     }
 
-    @GetMapping("/product/{id}")
-    public Product findProductById(@PathVariable int id){
+    @GetMapping("/productById/{id}")
+    public Product findProductById(@PathVariable int id) {
         return service.getProductById(id);
     }
 
     @GetMapping("/product/{name}")
-    public Product findProductByName(@PathVariable String name){
+    public Product findProductByName(@PathVariable String name) {
         return service.getProductByName(name);
     }
 

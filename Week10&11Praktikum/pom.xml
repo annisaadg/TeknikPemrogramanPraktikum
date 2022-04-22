@@ -5,16 +5,16 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.6</version>
+        <version>2.6.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>crud</artifactId>
+    <groupId>com.javatechie</groupId>
+    <artifactId>spring-boot-crud-example-2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>crud</name>
-    <description>crud</description>
+    <name>spring-boot-crud-example-2</name>
+    <description>spring-boot-crud-example-2</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
