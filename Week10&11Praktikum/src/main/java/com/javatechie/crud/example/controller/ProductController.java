@@ -25,7 +25,7 @@ public class ProductController {
 
     @GetMapping("/products")
     public List<Product> findAllProducts() throws Exception {
-        return service.findAll();
+        return service.getAll();
     }
 
     @GetMapping("/productById/{id}")

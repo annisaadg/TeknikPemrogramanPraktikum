@@ -1,4 +1,5 @@
 package com.javatechie.crud.example.service;
+import java.util.ArrayList;
 import java.util.List;
 import com.javatechie.crud.example.entity.Product;
 import com.javatechie.crud.example.repository.ProductRepository;
@@ -18,6 +19,13 @@ public class ProductService <T extends Product> implements ProductServiceInt<T>{
         } catch (Exception e) {
             throw e;
         }
+    }
+
+    public List<T> getAll()
+    {
+        List<T> product = (List<T>) new ArrayList<Product>();
+        repository.findAll().forEach(product1 -> product.add((T) product1));
+        return product;
     }
     public Product saveProduct(Product product) {
         return repository.save(product);
